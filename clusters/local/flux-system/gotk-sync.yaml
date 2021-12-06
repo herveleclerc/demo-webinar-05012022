@@ -1,3 +1,4 @@
+---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
@@ -21,7 +22,7 @@ spec:
     provider: sops
     secretRef:
       name: sops-gpg
-      
+
   interval: 10m0s
   path: ./clusters/local
   prune: true
