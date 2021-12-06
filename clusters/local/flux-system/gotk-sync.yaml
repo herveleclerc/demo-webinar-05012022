@@ -22,7 +22,6 @@ spec:
     provider: sops
     secretRef:
       name: sops-gpg
-
   interval: 10m0s
   path: ./clusters/local
   prune: true
