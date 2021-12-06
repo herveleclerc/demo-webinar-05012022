@@ -25,7 +25,6 @@ spec:
     kind: GitRepository
     name: flux-system
   validation: client
-  # Enable decryption
   decryption:
     provider: sops
     secretRef:
