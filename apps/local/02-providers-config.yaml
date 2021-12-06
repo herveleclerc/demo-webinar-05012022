@@ -1,0 +1,24 @@
+---
+apiVersion: azure.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: gitops-azure
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: crossplane-system
+      name: gitops-azure-credentials
+      key: credentials
+---
+apiVersion: helm.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: gitops-aks-helm-provider
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      name: gitops-aks-crossplane
+      namespace: crossplane-system
+      key: kubeconfig
