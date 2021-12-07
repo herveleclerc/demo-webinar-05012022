@@ -23,7 +23,7 @@ spec:
       namespace: crossplane-system
       key: kubeconfig
 ---
-apiVersion: kubernetes.crossplane.io/v1alpha1
+apiVersion: azure.crossplane.io/v1beta1
 kind: ProviderConfig
 metadata:
   name: gitops-aks-kubernetes-provider
