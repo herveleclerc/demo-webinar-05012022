@@ -1,0 +1,20 @@
+apiVersion: compute.azure.crossplane.io/v1alpha3
+kind: AKSCluster
+metadata:
+  name: gitops-aks-crossplane
+spec:
+  resourceGroupNameRef:
+    name: gitops-aks-crossplane-rg
+  vnetSubnetIDRef:
+    name: gitops-aks-crossplane-vnet-sub
+  location: northeurope
+  version: 1.21.2
+  nodeCount: 1
+  nodeVMSize: Standard_B2s
+  dnsNamePrefix: gitops-aks-crossplane
+  disableRBAC: false
+  providerConfigRef:
+    name: gitops-azure
+  writeConnectionSecretToRef:
+    namespace: crossplane-system
+    name: gitops-aks-crossplane

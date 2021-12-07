@@ -5,5 +5,7 @@ resources:
   - 01-gitops-azure-credentials.yaml
   - 02-providers-config.yaml
   - 03-rg.yaml
+  - 04-network.yaml
+  # - 05-aks.yaml
 patchesStrategicMerge:
   - crossplane-values.yaml
