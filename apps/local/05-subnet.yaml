@@ -1,0 +1,15 @@
+apiVersion: network.azure.crossplane.io/v1alpha3
+kind: Subnet
+metadata:
+  name: gitops-aks-crossplane-vnet-sub
+spec:
+  resourceGroupNameRef:
+    name: gitops-aks-crossplane-rg
+  virtualNetworkNameRef:
+    name: gitops-aks-crossplane-vnet
+  properties:
+    addressPrefix: 10.2.0.0/24
+  providerConfigRef:
+    name: gitops-azure
+---
+
