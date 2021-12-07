@@ -1,0 +1,16 @@
+apiVersion: kubernetes.crossplane.io/v1alpha1
+kind: Object
+metadata:
+  name: webinar-ns
+spec:
+  forProvider:
+    manifest:
+      apiVersion: v1
+      kind: Namespace
+      metadata:
+        # name in manifest is optional and defaults to Object name
+        # name: some-other-name
+        labels:
+          createdbyCrossplane: "true"
+  providerConfigRef:
+    name: gitops-aks-kubernetes-provider
