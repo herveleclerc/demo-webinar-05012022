@@ -6,7 +6,7 @@ resources:
   - 02-providers-config.yaml
   - 03-rg.yaml
   - 04-vnet.yaml
-  - 05-subnet.yaml
+  #- 05-subnet.yaml
   #- 06-aks.yaml
   #- 07-checking-provider-k8s.yaml
   #- 08-checking-provider-helm.yaml
