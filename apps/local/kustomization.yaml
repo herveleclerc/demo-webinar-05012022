@@ -9,6 +9,6 @@ resources:
   - 05-subnet.yaml
   - 06-aks.yaml
   #- 07-checking-provider-k8s.yaml
-  - 08-checking-provider-helm.yaml
+  #- 08-checking-provider-helm.yaml
 patchesStrategicMerge:
   - crossplane-values.yaml
